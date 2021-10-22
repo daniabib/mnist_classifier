@@ -18,7 +18,6 @@ class MNIST(Dataset):
         self.data = torch.from_numpy(data).to(torch.float32)
         self.labels = torch.from_numpy(labels).to(torch.long)
 
-
     def __getitem__(self, index: int) -> T_co:
         image = self.data[index]
         label = self.labels[index]
