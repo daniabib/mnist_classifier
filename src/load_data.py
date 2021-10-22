@@ -9,7 +9,7 @@ def load_train_data() -> np.ndarray:
     f = gzip.open('data/train-images-idx3-ubyte.gz', 'r')
     f.read(16)
     buf = f.read(row_size * col_size * num_samples)
-    data = np.frombuffer(buf, dtype=np.uint8).astype(np.float32)
+    data = np.frombuffer(buf, dtype=np.dtype(np.uint8)).astype(np.float32)
     return data.reshape((num_samples, row_size, col_size))
 
 
@@ -20,7 +20,7 @@ def load_test_data() -> np.ndarray:
     f = gzip.open('data/t10k-images-idx3-ubyte.gz', 'r')
     f.read(16)
     buf = f.read(row_size * col_size * num_samples)
-    data = np.frombuffer(buf, dtype=np.uint8).astype(np.float32)
+    data = np.frombuffer(buf, dtype=np.dtype(np.uint8)).astype(np.float32)
     return data.reshape((num_samples, row_size, col_size))
 
 
