@@ -9,7 +9,7 @@ from torchvision.transforms import transforms
 from src.dataset import get_train_dataloader, get_test_dataloader
 from src.models import FCNet
 
-EPOCHS = 30
+EPOCHS = 50
 BATCH_SIZE = 128
 LEARNING_RATE = 5e-5
 
