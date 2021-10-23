@@ -12,7 +12,7 @@ class FCNet(nn.Module):
         self.relu = nn.ReLU()
         self.fc2 = nn.Linear(in_features=64, out_features=32)
         self.fc3 = nn.Linear(in_features=32, out_features=10)
-        self.softmax = nn.LogSoftmax()
+        self.softmax = nn.LogSoftmax(dim=1)
 
     def forward(self, x: torch.Tensor):
         x = self.flatten(x)
