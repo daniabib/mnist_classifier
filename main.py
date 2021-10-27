@@ -91,3 +91,8 @@ for epoch in range(EPOCHS):
 
         print(f'Accuracy on test set: {100*correct/total:.2f}')
 
+try:
+    torch.save(model.state_dict(), "mnist_model_1.pt")
+    print("Model saved")
+except:
+    print("sometinh wrong")
